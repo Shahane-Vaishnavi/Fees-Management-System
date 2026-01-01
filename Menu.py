@@ -4,14 +4,14 @@ import os
 
 
 def __information__():
-       filename = 'Std_info_FrontEnd.py'
-       os.system(filename)
-       os.system('notepad'+filename)
+       filename = os.path.join(os.path.dirname(__file__), 'Std_info_FrontEnd.py')
+       import subprocess, sys
+       subprocess.Popen([sys.executable, filename])
 
 def __FeeReport__():
-       filename = 'Fee_Frontend.py'
-       os.system(filename)
-       os.system('notepad'+filename)
+       filename = os.path.join(os.path.dirname(__file__), 'Fee_Frontend.py')
+       import subprocess, sys
+       subprocess.Popen([sys.executable, filename])
        
        
 def menu():
